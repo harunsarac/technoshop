@@ -30,6 +30,62 @@
                 margin-right: 10px;
                 width: 85px;
             }
+            .post-images{
+                width: 250px;
+                height: 250px;
+                margin-left: 50px;
+                border-radius: 5px;
+            }
+            .modal {
+                display: none;
+                position: fixed;
+                z-index: 1;
+                padding-top: 100px;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                overflow: auto;
+                background-color: rgb(0,0,0);
+                background-color: rgba(0,0,0,0.4);
+            }
+            .modal-content {
+                background-color: #fefefe;
+                margin: auto;
+                padding: 20px;
+                border: 1px solid #888;
+                width: 20%;
+            }
+            .close {
+                color: #aaaaaa;
+                float: right;
+                font-size: 28px;
+                font-weight: bold;
+                cursor: pointer;
+            }
+            .form-box {
+                text-align:left;
+                margin-bottom:22px;
+            }
+            .input-boxes {
+                padding: 12px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                resize: vertical;
+                width: 30%;
+            }
+            .input-boxes:hover {
+                background-color: #eee;
+            }
+            .input-box {
+                padding: 12px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                resize: vertical;
+                width: 100%;
+                text-align: center;
+                font-size: 20px;
+            }
         </style>
     </head>
     <body>
@@ -37,7 +93,7 @@
             <section class="container">
                 <div class="row">
                     <div class="col-md-4">
-                        <h1 class="header-title">Techno Shop</h1>
+                        <a href="index.html" style="text-decoration: none"><h1 class="header-title">Techno Shop</h1></a>
                     </div>
                     <div class="col-md-4">
 
@@ -50,7 +106,194 @@
                 </div>
             </section>
         </nav>
-        <h1 style="text-align: center">WORK IN PROGRESS!!</h1>
-        <h2 style="text-align: center">Come back later :)</h2>
+        <div class="">
+            <section class="container" style="background-color: #f2f2f2">
+                <div class="row" style="padding-top: 30px">
+                    <div class="col-md-4 container">
+                        <div class="row" style="padding-bottom: 10px">
+                            <div class="col-md-12">
+                                <h5 id="productName1" style="text-align: center">Lenovo Ideapad 330</h5>
+                            </div>
+                        </div>
+                        <img class="post-images" src="images/1.jpg">
+                        <div class="row" style="padding-top: 10px">
+                            <div class="col-md-5"><h5 id="productPrice1" style="margin-top: 5px" class="float-right">900</h5><h5 style="margin-top: 5px" class="float-right">$</h5></div>
+                            <div class="col-md-7">
+                                <button id="addToCart1" class="btn btn-primary"><img src="icons/cart-white.png" height="20px" width="20px">Add to cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 container">
+                        <div class="row" style="padding-bottom: 10px">
+                            <div class="col-md-12">
+                                <h5 id="productName2" style="text-align: center">Asus Zenbook</h5>
+                            </div>
+                        </div>
+                        <img class="post-images" src="images/2.jpg">
+                        <div class="row" style="padding-top: 10px">
+                            <div class="col-md-5"><h5 id="productPrice2" style="margin-top: 5px" class="float-right">2400</h5><h5 style="margin-top: 5px" class="float-right">$</h5></div>
+                            <div class="col-md-7">
+                                <button id="addToCart2" class="btn btn-primary"><img src="icons/cart-white.png" height="20px" width="20px">Add to cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 container">
+                        <div class="row" style="padding-bottom: 10px">
+                            <div class="col-md-12">
+                                <h5 id="productName3" style="text-align: center">Lenovo X1 Carbon</h5>
+                            </div>
+                        </div>
+                        <img class="post-images" src="images/3.jpg">
+                        <div class="row" style="padding-top: 10px">
+                            <div class="col-md-5"><h5 id="productPrice3" style="margin-top: 5px" class="float-right">2100</h5><h5 style="margin-top: 5px" class="float-right">$</h5></div>
+                            <div class="col-md-7">
+                                <button id="addToCart3" class="btn btn-primary"><img src="icons/cart-white.png" height="20px" width="20px">Add to cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr/>
+                <div class="row" style="padding-top: 30px">
+                    <div class="col-md-4 container">
+                        <div class="row" style="padding-bottom: 10px">
+                            <div class="col-md-12">
+                                <h5 id="productName4" style="text-align: center">HP Omen</h5>
+                            </div>
+                        </div>
+                        <img class="post-images" src="images/4.jpg">
+                        <div class="row" style="padding-top: 10px">
+                            <div class="col-md-5"><h5 id="productPrice4" style="margin-top: 5px" class="float-right">1600</h5><h5 style="margin-top: 5px" class="float-right">$</h5></div>
+                            <div class="col-md-7">
+                                <button id="addToCart4" class="btn btn-primary"><img src="icons/cart-white.png" height="20px" width="20px">Add to cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 container">
+                        <div class="row" style="padding-bottom: 10px">
+                            <div class="col-md-12">
+                                <h5 id="productName5" style="text-align: center">Acer Predator</h5>
+                            </div>
+                        </div>
+                        <img class="post-images" src="images/5.jpg">
+                        <div class="row" style="padding-top: 10px">
+                            <div class="col-md-5"><h5 id="productPrice5" style="margin-top: 5px" class="float-right">1700</h5><h5 style="margin-top: 5px" class="float-right">$</h5></div>
+                            <div class="col-md-7">
+                                <button id="addToCart5" class="btn btn-primary"><img src="icons/cart-white.png" height="20px" width="20px">Add to cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 container">
+                        <div class="row" style="padding-bottom: 10px">
+                            <div class="col-md-12">
+                                <h5 id="productName6" style="text-align: center">Dell Alienware</h5>
+                            </div>
+                        </div>
+                        <img class="post-images" src="images/6.jpg">
+                        <div class="row" style="padding-top: 10px">
+                            <div class="col-md-5"><h5 id="productPrice6" style="margin-top: 5px" class="float-right">1400</h5><h5 style="margin-top: 5px" class="float-right">$</h5></div>
+                            <div class="col-md-7">
+                                <button id="addToCart6" class="btn btn-primary"><img src="icons/cart-white.png" height="20px" width="20px">Add to cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr/>
+            </section>
+        </div>
+        <div id="productModal" class="modal">
+            <div class="modal-content" style="width: 40%">
+                <span id="close1" class="close">&times;</span>
+                <div>
+                    <form method="POST" action="order.php">
+                        <input type="hidden" id="priceModal1" name="price" value="">
+                        <input class="input-box" style="width: 100%; border: none" id="nameModal1" name="product" value="" readonly>
+                        <div class="form-box">
+                            <label for="username">Username</label>
+                            <br>
+                            <input class="input-boxes" style="width: 100%" type="text" id="username" name="username" placeholder="Username" required>
+                        </div>
+                        <div class="form-box">
+                            <label for="email">Email</label>
+                            <br>
+                            <input class="input-boxes" style="width: 100%" type="email" id="email" name="email" placeholder="Email" required>
+                        </div>
+                        <div class="form-box">
+                            <label for="address">Address</label>
+                            <br>
+                            <input class="input-boxes" style="width: 100%" type="text" id="address" name="address" placeholder="Address" required>
+                        </div>
+                        <div class="form-box">
+                            <label for="quantity">Quantity</label>
+                            <br>
+                            <input class="input-boxes" style="width: 100%" type="number" id="quantity" name="quantity" placeholder="Quantity" required>
+                        </div>
+                        <div class="">
+                            <button class="btn btn-primary float-right" type="submit"><img src="icons/cart-white.png" height="20px" width="20px">Order</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
     </body>
 </html>
+<script>
+    var modal1 = document.getElementById("productModal");
+    var btn1 = document.getElementById("addToCart1");
+    var btn2 = document.getElementById("addToCart2");
+    var btn3 = document.getElementById("addToCart3");
+    var btn4 = document.getElementById("addToCart4");
+    var btn5 = document.getElementById("addToCart5");
+    var btn6 = document.getElementById("addToCart6");
+    var span1 = document.getElementById("close1");
+    var name1 = document.getElementById("productName1").innerHTML;
+    var name2 = document.getElementById("productName2").innerHTML;
+    var name3 = document.getElementById("productName3").innerHTML;
+    var name4 = document.getElementById("productName4").innerHTML;
+    var name5 = document.getElementById("productName5").innerHTML;
+    var name6 = document.getElementById("productName6").innerHTML;
+    var price1 = document.getElementById("productPrice1").innerHTML;
+    var price2 = document.getElementById("productPrice2").innerHTML;
+    var price3 = document.getElementById("productPrice3").innerHTML;
+    var price4 = document.getElementById("productPrice4").innerHTML;
+    var price5 = document.getElementById("productPrice5").innerHTML;
+    var price6 = document.getElementById("productPrice6").innerHTML;
+
+    btn1.onclick = function() {
+        modal1.style.display = "block";
+        document.getElementById("nameModal1").value = name1;
+        document.getElementById("priceModal1").value = price1;
+    }
+    btn2.onclick = function() {
+        modal1.style.display = "block";
+        document.getElementById("nameModal1").value = name2;
+        document.getElementById("priceModal1").value = price2;
+    }
+    btn3.onclick = function() {
+        modal1.style.display = "block";
+        document.getElementById("nameModal1").value = name3;
+        document.getElementById("priceModal1").value = price3;
+    }
+    btn4.onclick = function() {
+        modal1.style.display = "block";
+        document.getElementById("nameModal1").value = name4;
+        document.getElementById("priceModal1").value = price4;
+    }
+    btn5.onclick = function() {
+        modal1.style.display = "block";
+        document.getElementById("nameModal1").value = name5;
+        document.getElementById("priceModal1").value = price5;
+    }
+    btn6.onclick = function() {
+        modal1.style.display = "block";
+        document.getElementById("nameModal1").value = name6;
+        document.getElementById("priceModal1").value = price6;
+    }
+    span1.onclick = function() {
+        modal1.style.display = "none";
+    }
+    window.onclick = function(event) {
+        if (event.target == modal1) {
+            modal1.style.display = "none";
+        }
+    }
+</script>
